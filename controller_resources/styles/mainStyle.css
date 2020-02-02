@@ -2,48 +2,112 @@ html, body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
+	background-color: black;
+	margin: 0;
 }
 
-#primeira {
-	display: flex;
-	flex-direction: row;
-	position:fixed !important;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-}
-
-
-.div1 {
-	background-color: red;
-	height: 100%;
-	width: 50%;
-}
-.div2 {
-	background-color: blue;
-	height: 100%;
-	display: flex;
-	width: 50%;
-}
-
-body {
-	background-color: #222;
-}
-
-button {
-	margin-bottom: 1px;
+.controller{
 	width: 100%;
-	height: 48%;
-	border: 0;
-	box-sizing: border-box;
-	font-size: 40px;
-	color: #FFFFFF;
-	background-color: #333333;
-	outline: none;
-	cursor: pointer;
+	height: 100%;
+	background-color: #D4A500;
 }
 
-button:hover {
-	background-color: #444444;
+.controller .stripe{
+	width: 100%;
+	min-height: 5vh;
+	background:url('../img/stripe.png');
+	background-repeat: round;
+}
+
+.controller .stripe.stripe-bottom{
+	position: absolute;
+    bottom: 0;
+}
+
+.content{
+    width: 100%;
+	height: 90vh;
+	display: flex;
+	align-items: center; /* horizontal */
+    justify-content: center; /* vertical */
+}
+
+.content .col-6{
+	width: 50%;
+    height: 100%;
+}
+
+[class^="hole"]{
+	background-color: black;
+	margin: auto;
+}
+[class^="hole-circle"]{
+	border-radius: 50%;
+}
+.hole-circle-md{
+	width: 40vh;
+	height: 40vh;
+}
+.hole-circle-lg{
+	width: 70vh;
+	height: 70vh;
+}
+
+.inline-fill{
+	display: inline-flex;
+    height: 100%;
+    width: 100%;
+}
+
+.joypad-spc{
+	padding: 5px;
+	display: flow-root;
+}
+.joypad-spc [class^="key-"]{
+	width: 33%;
+    height: 33%;
+}
+
+.action-spc{
+	padding: 10px;
+}
+.action-spc > *{
+	width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+[class^="key-"],[class^="btn-"]{
+	background-repeat: round !important;
+	transition: opacity .3s;
+	transition: transform .2s;
+}
+
+[class^="key-"]:active,[class^="btn-"]:active{
+	opacity: .8;
+	-moz-transform: scale(.8) translate(0px, 10px);
+	-webkit-transform: scale(.8) translate(0px, 10px);
+	-o-transform: scale(.8) translate(0px, 10px);
+	-ms-transform: scale(.8) translate(0px, 10px);
+	transform: scale(.8) translate(0px, 10px);
+}
+
+.btn-action{
+	background: url('../img/btAction.png');
+}
+.key-up{
+	background: url('../img/btArrowUp.png');
+	margin: auto;
+}
+.key-left{
+	background: url('../img/btArrowLeft.png');
+	float: left;
+}
+.key-right{
+	background: url('../img/btArrowRight.png');
+	float: right;
+}
+.key-down{
+	background: url('../img/btArrowDown.png');
+	margin: auto;
 }

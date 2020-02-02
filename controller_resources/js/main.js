@@ -52,6 +52,26 @@ $(document).ready(function() {
 	$('#down').on(upEvent, function (event) {
 		sendMessage('stop');
 	});
+	
+	$('#left').on(downEvent, function (event) {
+		sendMessage('left');
+	});
+	
+	$('#left').on(upEvent, function (event) {
+		sendMessage('stop');
+	});
+	
+	$('#right').on(downEvent, function (event) {
+		sendMessage('right');
+	});
+	
+	$('#right').on(upEvent, function (event) {
+		sendMessage('stop');
+	});
+	
+	$('#action').on(upEvent, function (event) {
+		sendMessage('action');
+	});
 });
 
 /**
